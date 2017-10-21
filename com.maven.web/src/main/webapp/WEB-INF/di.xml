@@ -17,7 +17,7 @@
 	<!-- 开启注解 -->
 	<context:annotation-config/>
 	<!-- 设置扫描范围 -->
-	<context:component-scan base-package="com.usermanager"/>
+	<context:component-scan base-package="com"/>
 	<!-- 设置自动代理 -->
 	<aop:aspectj-autoproxy/>
 	
@@ -26,9 +26,9 @@
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl"
-		value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=utf8" />
+		value="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf8" />
 		<property name="user" value="root" />
-		<property name="password" value="root"/>
+		<property name="password" value="123456"/>
 	 </bean>
 
  	 <!-- 配置SessionFactory -->
@@ -46,7 +46,7 @@
 			</props>
 		</property>
 		<!--扫描注解文件-->
-		<property name="packagesToScan" value="com.usermanager.entity"/>
+		<property name="packagesToScan" value="com.entity"/>
 	 </bean>
 	 
 	 
